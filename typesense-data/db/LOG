@@ -19790,3 +19790,34 @@ Block cache LRUCache@0xffff9d866050#1 capacity: 8.00 MB usage: 207.89 KB table_s
 Block cache entry stats(count,size,portion): DataBlock(39,185.55 KB,2.26498%) OtherBlock(74,11.66 KB,0.142288%) Misc(1,0.00 KB,0%)
 
 ** File Read Latency Histogram By Level [default] **
+2024/08/13-02:29:01.710112 205 [utilities/checkpoint/checkpoint_impl.cc:94] Started the snapshot process -- creating snapshot in directory /data/state/snapshot/temp/db_snapshot
+2024/08/13-02:29:01.712711 205 [utilities/checkpoint/checkpoint_impl.cc:110] Snapshot process -- using temporary directory /data/state/snapshot/temp/db_snapshot.tmp
+2024/08/13-02:29:01.718919 205 [db/db_impl/db_impl_files.cc:47] File Deletions Disabled
+2024/08/13-02:29:01.723632 205 [db/db_impl/db_impl_write.cc:2089] [default] New memtable created with log file: #193. Immutable memtables: 0.
+2024/08/13-02:29:01.724816 146 (Original Log Time 2024/08/13-02:29:01.724735) [db/db_impl/db_impl_compaction_flush.cc:2832] Calling FlushMemTableToOutputFile with column family [default], flush slots available 4, compaction slots available 1, flush slots scheduled 1, compaction slots scheduled 0
+2024/08/13-02:29:01.724831 146 [db/flush_job.cc:861] [default] [JOB 113] Flushing memtable with next log file: 193
+2024/08/13-02:29:01.724945 146 EVENT_LOG_v1 {"time_micros": 1723516141724914, "job": 113, "event": "flush_started", "num_memtables": 1, "num_entries": 3, "num_deletes": 0, "total_data_size": 340, "memory_usage": 1136, "flush_reason": "Get Live Files"}
+2024/08/13-02:29:01.724952 146 [db/flush_job.cc:890] [default] [JOB 113] Level-0 flush table #194: started
+2024/08/13-02:29:01.733934 146 EVENT_LOG_v1 {"time_micros": 1723516141733829, "cf_name": "default", "job": 113, "event": "table_file_creation", "file_number": 194, "file_size": 1161, "file_checksum": "", "file_checksum_func_name": "Unknown", "smallest_seqno": 340, "largest_seqno": 341, "table_properties": {"data_size": 82, "index_size": 20, "index_partitions": 0, "top_level_index_size": 0, "index_key_is_user_key": 1, "index_value_is_delta_encoded": 1, "filter_size": 0, "raw_key_size": 32, "raw_average_key_size": 16, "raw_value_size": 72, "raw_average_value_size": 36, "num_data_blocks": 1, "num_entries": 2, "num_filter_entries": 0, "num_deletions": 1, "num_merge_operands": 0, "num_range_deletions": 1, "format_version": 0, "fixed_key_len": 0, "filter_policy": "", "column_family_name": "default", "column_family_id": 0, "comparator": "leveldb.BytewiseComparator", "merge_operator": "UInt64AddOperator", "prefix_extractor_name": "nullptr", "property_collectors": "[]", "compression": "NoCompression", "compression_options": "window_bits=-14; level=32767; strategy=0; max_dict_bytes=0; zstd_max_train_bytes=0; enabled=0; max_dict_buffer_bytes=0; use_zstd_dict_trainer=1; ", "creation_time": 1723512499, "oldest_key_time": 1723512499, "file_creation_time": 1723516141, "slow_compression_estimated_data_size": 0, "fast_compression_estimated_data_size": 0, "db_id": "d29488b0-a643-4b8e-ad80-0a4296112a7e", "db_session_id": "UCPI7W6PBISUNN5AJB4Z", "orig_file_number": 194, "seqno_to_time_mapping": "N/A"}}
+2024/08/13-02:29:01.736081 146 [db/flush_job.cc:1025] [default] [JOB 113] Flush lasted 11273 microseconds, and 2663 cpu microseconds.
+2024/08/13-02:29:01.740345 146 (Original Log Time 2024/08/13-02:29:01.736065) [db/flush_job.cc:973] [default] [JOB 113] Level-0 flush table #194: 1161 bytes OK
+2024/08/13-02:29:01.740348 146 (Original Log Time 2024/08/13-02:29:01.736093) [db/memtable_list.cc:519] [default] Level-0 commit table #194 started
+2024/08/13-02:29:01.740349 146 (Original Log Time 2024/08/13-02:29:01.739554) [db/memtable_list.cc:722] [default] Level-0 commit table #194: memtable #1 done
+2024/08/13-02:29:01.740351 146 (Original Log Time 2024/08/13-02:29:01.739589) EVENT_LOG_v1 {"time_micros": 1723516141739575, "job": 113, "event": "flush_finished", "output_compression": "NoCompression", "lsm_state": [1, 1, 0, 0, 0, 0, 0], "immutable_memtables": 0}
+2024/08/13-02:29:01.740352 146 (Original Log Time 2024/08/13-02:29:01.739611) [db/db_impl/db_impl_compaction_flush.cc:299] [default] Level summary: files[1 1 0 0 0 0 0] max score 0.50
+2024/08/13-02:29:01.740426 205 [WARN] [db/db_impl/db_impl_files.cc:49] File Deletions Disabled, but already disabled. Counter: 2
+2024/08/13-02:29:01.756423 205 [db/wal_manager.cc:83] Latest Archived log: 188
+2024/08/13-02:29:01.756437 205 [WARN] [db/db_impl/db_impl_files.cc:89] File Deletions Enable, but not really enabled. Counter: 1
+2024/08/13-02:29:01.757707 205 [db/db_filesnapshot.cc:407] Number of log files 22
+2024/08/13-02:29:01.757725 205 [utilities/checkpoint/checkpoint_impl.cc:126] Hard Linking 000194.sst
+2024/08/13-02:29:01.761137 205 [utilities/checkpoint/checkpoint_impl.cc:126] Hard Linking 000192.sst
+2024/08/13-02:29:01.764569 205 [utilities/checkpoint/checkpoint_impl.cc:137] Copying MANIFEST-000005
+2024/08/13-02:29:01.771803 205 [utilities/checkpoint/checkpoint_impl.cc:143] Creating CURRENT
+2024/08/13-02:29:01.774643 205 [utilities/checkpoint/checkpoint_impl.cc:126] Hard Linking OPTIONS-000007
+2024/08/13-02:29:01.778334 205 [db/db_impl/db_impl_files.cc:84] File Deletions Enabled
+2024/08/13-02:29:01.778343 205 [db/db_impl/db_impl_files.cc:463] [JOB 0] Try to delete WAL files size 45, prev total WAL file size 45, number of live WAL files 2.
+2024/08/13-02:29:01.781035 205 [db/wal_manager.cc:285] Move log file /data/db/000190.log to /data/db/archive/000190.log -- OK
+2024/08/13-02:29:01.781647 205 [db/wal_manager.cc:285] Move log file /data/db/000190.log to /data/db/archive/000190.log -- IO error: No such file or directory: While renaming a file to /data/db/archive/000190.log: /data/db/000190.log: No such file or directory
+2024/08/13-02:29:01.785349 205 [file/delete_scheduler.cc:73] Deleted file /data/db/archive/000133.log immediately, rate_bytes_per_sec 0, total_trash_size 0 max_trash_db_ratio 0.250000
+2024/08/13-02:29:01.789510 205 [utilities/checkpoint/checkpoint_impl.cc:179] Snapshot DONE. All is good
+2024/08/13-02:29:01.789513 205 [utilities/checkpoint/checkpoint_impl.cc:180] Snapshot sequence number: 341

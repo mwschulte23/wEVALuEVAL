@@ -15479,3 +15479,5 @@ Block cache LRUCache@0xffff9d866550#1 capacity: 8.00 MB usage: 0.09 KB table_siz
 Block cache entry stats(count,size,portion): Misc(1,0.00 KB,0%)
 
 ** File Read Latency Histogram By Level [default] **
+2024/08/13-02:29:01.704778 205 [db/db_impl/db_impl_compaction_flush.cc:1746] [default] Manual flush start.
+2024/08/13-02:29:01.707961 205 [db/db_impl/db_impl_compaction_flush.cc:1756] [default] Manual flush finished, status: OK
