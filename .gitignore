@@ -2,5 +2,5 @@
 .env
 debug.log
 test.db
-typesense-data
+typesense-data/
 *__pycache__*
