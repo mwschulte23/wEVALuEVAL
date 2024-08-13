@@ -1,3 +1,6 @@
 .venv
 .env
 debug.log
+test.db
+typesense-data
+*__pycache__*

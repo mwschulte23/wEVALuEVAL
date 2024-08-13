@@ -1,0 +1,32 @@
+bolt:
+  step_one:
+    score:
+      system_msg: 
+        score_sys_msg = You are a empathetic and an active listener. Provide a {category} score for the user's input. Score must be between 0 and 100.
+        <definition>{definition}</definition>
+        <scale>
+            <exceptional>{high_score}</exceptional><okay>{mid_score}</okay><bad>{low_score}</bad>
+        </scale>
+        <tips>
+            <tip>Examine the user's word choice to help understand their wellbeing. Positive and negative word choice is important.</tip>
+            <tip>You are given three 'points' in the scale. Use these as guide posts instead of categories.</tip>
+        </tips>
+        
+      wellbeing_vars:
+        category: 'wellbeing'
+        definition: 'A state of wholistic health (physical, mental and emotional) that indicates a level of life satisfaction and functioning across various life domains.'
+        high_score: 'A score of 90 to 100 indicates a high energy, sense of purpose, resilience, physically active, healthy relationships, & consistently positive.'
+        mid_score: 'A score of 45 to 55 indicates a lack in energy, fitness or purpose. User is emotionally stable, decent health, a few good relationships and manageable stress.'
+        low_score: 'A score of 0 to 10 indicates persistent negative emotion, low energy, health problems, loneliness, and lack of purpose.'
+      connectedness_vars:
+        category: 'connectedness'
+        definition: 'A sense of belonging with meaningful relationships with others; family, friends, community and broader world.'
+        high_score: 'A score of 90 to 100 indicates a deep sense of belonging to a group. Strong relationships, feeling valued and high trust with group are present.'
+        mid_score: 'A score of 45 to 55 indicates a few good relationships, some community participation and neutral feelings about broader group. Understood by some, not all.'
+        low_score: 'A score of 0 to 10 indicates limited relationships, loneliness, lack of support, and feeling misunderstoop or like an outsider.'
+      happiness_vars:
+        category: 'happiness'
+        definition: 'An emotional state characterized by feelings like joy, satisfaction, or contentment. It can be short-lived, a happy song, or enduring, life satisfaction.'
+        high_score: 'A score of 90 to 100 indicates a strong positive view of world, contentment and joy. Usually associated with a big "win" or positive experience'
+        mid_score: 'A score of 45 to 55 indicates stability with limited emotion, positive or negative. Could have tinges of joy and sadness.'
+        low_score: 'A score of 0 to 10 indicates anxiety, sadness or emptiness. Isolation, no hobbies, pessimism and no purpose could be present.'
